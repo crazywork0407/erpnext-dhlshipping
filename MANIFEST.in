@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include erpnext_dhlshipping *.css
+recursive-include erpnext_dhlshipping *.csv
+recursive-include erpnext_dhlshipping *.html
+recursive-include erpnext_dhlshipping *.ico
+recursive-include erpnext_dhlshipping *.js
+recursive-include erpnext_dhlshipping *.json
+recursive-include erpnext_dhlshipping *.md
+recursive-include erpnext_dhlshipping *.png
+recursive-include erpnext_dhlshipping *.py
+recursive-include erpnext_dhlshipping *.svg
+recursive-include erpnext_dhlshipping *.txt
+recursive-exclude erpnext_dhlshipping *.pyc
