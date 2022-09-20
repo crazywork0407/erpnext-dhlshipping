@@ -12,23 +12,23 @@ from frappe.model.document import Document
 from frappe.utils.password import get_decrypted_password
 from erpnext_dhlshipping.erpnext_dhlshipping.utils import show_error_alert
 
-LETMESHIP_PROVIDER = 'LetMeShip'
+DHL_PROVIDER = 'DHL'
 
-class LetMeShip(Document): pass
+class DHL(Document): pass
 
-class LetMeShipUtils():
+class DHLUtils():
 	def __init__(self):
-		self.api_password = get_decrypted_password('LetMeShip', 'LetMeShip', 'api_password', raise_exception=False)
-		self.api_id, self.enabled = frappe.db.get_value('LetMeShip', 'LetMeShip', ['api_id', 'enabled'])
+		self.api_password = get_decrypted_password('DHL', 'DHL', 'api_password', raise_exception=False)
+		self.api_id, self.enabled = frappe.db.get_value('DHL', 'DHL', ['api_id', 'enabled'])
 
 		if not self.enabled:
-			link = frappe.utils.get_link_to_form('LetMeShip', 'LetMeShip', frappe.bold('LetMeShip Settings'))
-			frappe.throw(_('Please enable LetMeShip Integration in {0}'.format(link)), title=_('Mandatory'))
+			link = frappe.utils.get_link_to_form('DHL', 'DHL', frappe.bold('DHL Settings'))
+			frappe.throw(_('Please enable DHL Integration in {0}'.format(link)), title=_('Mandatory'))
 
 	def get_available_services(self, delivery_to_type, pickup_address,
 		delivery_address, shipment_parcel, description_of_content, pickup_date,
 		value_of_goods, pickup_contact=None, delivery_contact=None):
-		# Retrieve rates at LetMeShip from specification stated.
+		# Retrieve rates at DHL from specification stated.
 		if not self.enabled or not self.api_id or not self.api_password:
 			return []
 
@@ -69,16 +69,16 @@ class LetMeShipUtils():
 
 				return available_services
 			else:
-				frappe.throw(_('An Error occurred while fetching LetMeShip prices: {0}')
+				frappe.throw(_('An Error occurred while fetching DHL prices: {0}')
 					.format(response_data['message']))
 		except Exception:
-			show_error_alert("fetching LetMeShip prices")
+			show_error_alert("fetching DHL prices")
 
 		return []
 
 	def create_shipment(self, pickup_address, delivery_address, shipment_parcel, description_of_content,
 		pickup_date, value_of_goods, service_info, pickup_contact=None, delivery_contact=None):
-		# Create a transaction at LetMeShip
+		# Create a transaction at DHL
 		if not self.enabled or not self.api_id or not self.api_password:
 			return []
 

@@ -136,6 +136,20 @@ def create_shipment(shipment, pickup_from_type, delivery_to_type, pickup_address
 			service_info=service_info,
 		)
 
+	if service_info['service_provider'] == DHL_PROVIDER:
+		dhl = DHLUtils()
+		shipment_info = dhl.create_shipment(
+			pickup_address=pickup_address,
+			delivery_address=delivery_address,
+			shipment_parcel=shipment_parcel,
+			description_of_content=description_of_content,
+			pickup_date=pickup_date,
+			value_of_goods=value_of_goods,
+			pickup_contact=pickup_contact,
+			delivery_contact=delivery_contact,
+			service_info=service_info,
+		)
+
 	if shipment_info:
 		fields = ['service_provider', 'carrier', 'carrier_service', 'shipment_id', 'shipment_amount', 'awb_number']
 		for field in fields:
