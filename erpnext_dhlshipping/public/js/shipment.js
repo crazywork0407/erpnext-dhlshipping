@@ -5,7 +5,7 @@ frappe.ui.form.on('Shipment', {
 	refresh: function (frm) {
 		if (frm.doc.docstatus === 1 && !frm.doc.shipment_id) {
 			frm.add_custom_button(__('Fetch DHL Shipping Rates'), function () {
-				return frm.events.fetch_shipping_rates(frm);
+				return frm.events.fetch_dhlshipping_rates(frm);
 			});
 		}
 		if (frm.doc.shipment_id) {
@@ -30,7 +30,7 @@ frappe.ui.form.on('Shipment', {
 		}
 	},
 
-	fetch_shipping_rates: function (frm) {
+	fetch_dhlshipping_rates: function (frm) {
 		if (!frm.doc.shipment_id) {
 			frappe.call({
 				method: "erpnext_dhlshipping.erpnext_dhlshipping.shipping.fetch_shipping_rates",
