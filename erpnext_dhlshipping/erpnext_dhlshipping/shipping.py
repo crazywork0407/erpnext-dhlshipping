@@ -23,6 +23,7 @@ def fetch_shipping_rates(pickup_from_type, delivery_to_type, pickup_address_name
 	letmeship_enabled = frappe.db.get_single_value('LetMeShip','enabled')
 	packlink_enabled = frappe.db.get_single_value('Packlink','enabled')
 	sendcloud_enabled = frappe.db.get_single_value('SendCloud','enabled')
+	dhl_enabled = frappe.db.get_single_value('DHL','enabled')
 	pickup_address = get_address(pickup_address_name)
 	delivery_address = get_address(delivery_address_name)
 
@@ -72,6 +73,22 @@ def fetch_shipping_rates(pickup_from_type, delivery_to_type, pickup_address_name
 			shipment_parcel=shipment_parcel
 		) or []
 		shipment_prices = shipment_prices + sendcloud_prices[:4] # remove after fixing scroll issue
+
+	if dhl_enabled:
+		dhl = DHLUtils()
+		dhl_prices = dhl.get_available_services(
+			delivery_to_type=delivery_to_type,
+			pickup_address=pickup_address,
+			delivery_address=delivery_address,
+			shipment_parcel=shipment_parcel,
+			description_of_content=description_of_content,
+			pickup_date=pickup_date,
+			value_of_goods=value_of_goods,
+			pickup_contact=pickup_contact,
+			delivery_contact=delivery_contact,
+		) or []
+		dhl_prices = match_parcel_service_type_carrier(dhl_prices, ['carrier_name', 'carrier'])
+		shipment_prices = shipment_prices + dhl_prices
 	shipment_prices = sorted(shipment_prices, key=lambda k:k['total_price'])
 	return shipment_prices
 
@@ -172,6 +189,9 @@ def print_shipping_label(service_provider, shipment_id):
 	elif service_provider == SENDCLOUD_PROVIDER:
 		sendcloud = SendCloudUtils()
 		shipping_label = sendcloud.get_label(shipment_id)
+	elif service_provider == DHL_PROVIDER:
+		dhl = DHLUtils()
+		shipping_label = dhl.get_label(shipment_id)
 	return shipping_label
 
 @frappe.whitelist()
@@ -187,6 +207,9 @@ def update_tracking(shipment, service_provider, shipment_id, delivery_notes=[]):
 	elif service_provider == SENDCLOUD_PROVIDER:
 		sendcloud = SendCloudUtils()
 		tracking_data = sendcloud.get_tracking_data(shipment_id)
+	elif service_provider == DHL_PROVIDER:
+		dhl = DHLUtils()
+		tracking_data = dhl.get_tracking_data(shipment_id)
 
 	if tracking_data:
 		fields = ['awb_number', 'tracking_status', 'tracking_status_info', 'tracking_url']

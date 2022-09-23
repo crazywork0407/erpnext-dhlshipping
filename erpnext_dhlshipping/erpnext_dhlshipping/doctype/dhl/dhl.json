@@ -1,6 +1,6 @@
 {
     "actions": [],
-    "creation": "2020-07-23 10:55:19.669830",
+    "creation": "2022-09-20 06:44:19.669830",
     "doctype": "DocType",
     "editable_grid": 1,
     "engine": "InnoDB",
@@ -37,7 +37,7 @@
     ],
     "issingle": 1,
     "links": [],
-    "modified": "2020-12-16 15:36:48.424827",
+    "modified": "2022-09-20 06:54:19.669830",
     "modified_by": "Administrator",
     "module": "ERPNext DHLShipping",
     "name": "DHL",

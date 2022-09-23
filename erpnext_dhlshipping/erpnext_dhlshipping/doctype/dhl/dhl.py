@@ -37,7 +37,7 @@ class DHLUtils():
 		delivery_address.address_title = self.trim_address(delivery_address)
 		parcel_list = self.get_parcel_list(json.loads(shipment_parcel), description_of_content)
 
-		url = 'https://api.letmeship.com/v1/available'
+		url = 'https://express.api.dhl.com/mydhlapi/test'
 		headers = {
 			'Content-Type': 'application/json',
 			'Accept': 'application/json',
