@@ -6,8 +6,10 @@
     "engine": "InnoDB",
     "field_order": [
         "enabled",
-        "api_id",
-        "api_password",
+        "application_id",
+        "application_token",
+        "cis_user",
+        "cis_signature",
         "information"
     ],
     "fields": [
@@ -18,21 +20,28 @@
             "label": "Enabled"
         },
         {
-            "fieldname": "api_id",
+            "fieldname": "application_id",
             "fieldtype": "Data",
-            "label": "API ID",
+            "label": "Application ID",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "api_password",
+            "fieldname": "application_token",
             "fieldtype": "Password",
-            "label": "API Password",
+            "label": "Application Token",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "information",
-            "fieldtype": "HTML",
-            "options": "<div><span class=\"text-medium text-muted\">For steps to generate the API ID, click <a href=\"https://www.letmeship.com/en-at/connect-the-shipping-interface/\" target=\"_blank\">here</a></span></div>"
+            "fieldname": "cis_user",
+            "fieldtype": "Data",
+            "label": "CIS USER",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "cis_signature",
+            "fieldtype": "Password",
+            "label": "CIS SIGNATURE",
+            "read_only_depends_on": "eval:doc.enabled == 0"
         }
     ],
     "issingle": 1,
