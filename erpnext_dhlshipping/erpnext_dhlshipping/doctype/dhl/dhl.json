@@ -32,15 +32,87 @@
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "cis_user",
+            "fieldname": "user",
             "fieldtype": "Data",
-            "label": "CIS USER",
+            "label": "User",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "cis_signature",
+            "fieldname": "signature",
             "fieldtype": "Password",
-            "label": "CIS SIGNATURE",
+            "label": "Signature",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_name",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_address_streetname",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Address Street Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_address_streetnumber",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Address Street Number",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_dispatching_information",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Dispatching Information",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_zip",
+            "fieldtype": "Data",
+            "label": "Shipper 1 ZIP",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_city",
+            "fieldtype": "Data",
+            "label": "Shipper 1 City",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_country",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin Country",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_iso_code",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin ISO Code",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_state",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin State",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_phone",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Phone",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_email",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Email",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_contact_person",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Contact Person",
             "read_only_depends_on": "eval:doc.enabled == 0"
         }
     ],
