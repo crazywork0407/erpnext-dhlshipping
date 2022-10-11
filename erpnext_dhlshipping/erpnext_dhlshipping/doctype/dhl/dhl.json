@@ -44,16 +44,6 @@
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper",
-            "fieldtype": "Select",
-            "label": "Shipper",
-            "options": [
-                "Shipper 1",
-                "Shipper 2"
-            ],
-            "read_only_depends_on": "eval:doc.enabled == 0"
-        },
-        {
             "fieldname": "shipper1_name",
             "fieldtype": "Data",
             "label": "Shipper 1 Name",
