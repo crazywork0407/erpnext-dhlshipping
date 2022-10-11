@@ -44,6 +44,16 @@
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
+            "fieldname": "shipper",
+            "fieldtype": "Select",
+            "label": "Shipper",
+            "options": [
+                "Shipper 1",
+                "Shipper 2"
+            ],
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
             "fieldname": "shipper1_name",
             "fieldtype": "Data",
             "label": "Shipper 1 Name",
@@ -113,6 +123,222 @@
             "fieldname": "shipper1_contact_person",
             "fieldtype": "Data",
             "label": "Shipper 1 Contact Person",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_name",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_address_streetname",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Address Street Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_address_streetnumber",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Address Street Number",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_dispatching_information",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Dispatching Information",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_zip",
+            "fieldtype": "Data",
+            "label": "Shipper 1 ZIP",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_city",
+            "fieldtype": "Data",
+            "label": "Shipper 1 City",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_country",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin Country",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_iso_code",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin ISO Code",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_state",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin State",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_phone",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Phone",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_email",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Email",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_contact_person",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Contact Person",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_name",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_address_streetname",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Address Street Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_address_streetnumber",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Address Street Number",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_dispatching_information",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Dispatching Information",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_zip",
+            "fieldtype": "Data",
+            "label": "Shipper 1 ZIP",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_city",
+            "fieldtype": "Data",
+            "label": "Shipper 1 City",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_country",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin Country",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_iso_code",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin ISO Code",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_origin_state",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Origin State",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_phone",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Phone",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_email",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Email",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper1_contact_person",
+            "fieldtype": "Data",
+            "label": "Shipper 1 Contact Person",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_name",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_address_streetname",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Address Street Name",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_address_streetnumber",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Address Street Number",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_dispatching_information",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Dispatching Information",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_zip",
+            "fieldtype": "Data",
+            "label": "Shipper 2 ZIP",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_city",
+            "fieldtype": "Data",
+            "label": "Shipper 2 City",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_origin_country",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Origin Country",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_origin_iso_code",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Origin ISO Code",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_origin_state",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Origin State",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_phone",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Phone",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_email",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Email",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper2_contact_person",
+            "fieldtype": "Data",
+            "label": "Shipper 2 Contact Person",
             "read_only_depends_on": "eval:doc.enabled == 0"
         }
     ],
