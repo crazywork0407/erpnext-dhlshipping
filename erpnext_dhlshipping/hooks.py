@@ -1,7 +1,7 @@
 from . import __version__ as app_version
 
 app_name = "erpnext_dhlshipping"
-app_title = "ERPNext DHLShipping"
+app_title = "ERPNext DHL Shipping"
 app_publisher = "Bogdan Trajkovic"
 app_description = "DHL Shipping service for ERPNext"
 app_email = "pthemes.developer@gmail.com"
@@ -30,7 +30,7 @@ app_license = "MIT"
 
 # include js in doctype views
 doctype_js = {
-	"Shipment" : "public/js/shipment.js"
+    "Shipment": "public/js/shipment.js"
 }
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
@@ -116,9 +116,9 @@ doctype_js = {
 # ---------------
 
 scheduler_events = {
-	"daily": [
-		"erpnext_dhlshipping.erpnext_dhlshipping.utils.update_tracking_info_daily"
-	]
+    "daily": [
+        "erpnext_dhlshipping.erpnext_dhlshipping.utils.update_tracking_info_daily"
+    ]
 }
 
 # scheduler_events = {

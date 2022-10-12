@@ -11,30 +11,30 @@
         "user",
         "signature",
         "information",
-        "shipper1_name",
-        "shipper1_address_streetname",
-        "shipper1_address_streetnumber",
-        "shipper1_dispatching_information",
-        "shipper1_zip",
-        "shipper1_city",
-        "shipper1_origin_country",
-        "shipper1_origin_iso_code",
-        "shipper1_origin_state",
-        "shipper1_phone",
-        "shipper1_email",
-        "shipper1_contact_person",
-        "shipper2_name",
-        "shipper2_address_streetname",
-        "shipper2_address_streetnumber",
-        "shipper2_dispatching_information",
-        "shipper2_zip",
-        "shipper2_city",
-        "shipper2_origin_country",
-        "shipper2_origin_iso_code",
-        "shipper2_origin_state",
-        "shipper2_phone",
-        "shipper2_email",
-        "shipper2_contact_person"
+        "sales_name",
+        "sales_address_streetname",
+        "sales_address_streetnumber",
+        "sales_dispatching_information",
+        "sales_zip",
+        "sales_city",
+        "sales_origin_country",
+        "sales_origin_iso_code",
+        "sales_origin_state",
+        "sales_phone",
+        "sales_email",
+        "sales_contact_person",
+        "rental_name",
+        "rental_address_streetname",
+        "rental_address_streetnumber",
+        "rental_dispatching_information",
+        "rental_zip",
+        "rental_city",
+        "rental_origin_country",
+        "rental_origin_iso_code",
+        "rental_origin_state",
+        "rental_phone",
+        "rental_email",
+        "rental_contact_person"
     ],
     "fields": [
         {
@@ -47,13 +47,15 @@
             "fieldname": "application_id",
             "fieldtype": "Data",
             "label": "Application ID",
-            "read_only_depends_on": "eval:doc.enabled == 0"
+            "read_only_depends_on": "eval:doc.enabled == 0",
+            "columns": 1
         },
         {
             "fieldname": "application_token",
             "fieldtype": "Password",
             "label": "Application Token",
-            "read_only_depends_on": "eval:doc.enabled == 0"
+            "read_only_depends_on": "eval:doc.enabled == 0",
+            "columns": 2
         },
         {
             "fieldname": "user",
@@ -68,147 +70,147 @@
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_name",
+            "fieldname": "sales_name",
             "fieldtype": "Data",
-            "label": "Shipper 1 Name",
+            "label": "SALES Name",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_address_streetname",
+            "fieldname": "sales_address_streetname",
             "fieldtype": "Data",
-            "label": "Shipper 1 Address Street Name",
+            "label": "SALES Address Street Name",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_address_streetnumber",
+            "fieldname": "sales_address_streetnumber",
             "fieldtype": "Data",
-            "label": "Shipper 1 Address Street Number",
+            "label": "SALES Address Street Number",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_dispatching_information",
+            "fieldname": "sales_dispatching_information",
             "fieldtype": "Data",
-            "label": "Shipper 1 Dispatching Information",
+            "label": "SALES Dispatching Information",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_zip",
+            "fieldname": "sales_zip",
             "fieldtype": "Data",
-            "label": "Shipper 1 ZIP",
+            "label": "SALES ZIP",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_city",
+            "fieldname": "sales_city",
             "fieldtype": "Data",
-            "label": "Shipper 1 City",
+            "label": "SALES City",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_origin_country",
+            "fieldname": "sales_origin_country",
             "fieldtype": "Data",
-            "label": "Shipper 1 Origin Country",
+            "label": "SALES Origin Country",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_origin_iso_code",
+            "fieldname": "sales_origin_iso_code",
             "fieldtype": "Data",
-            "label": "Shipper 1 Origin ISO Code",
+            "label": "SALES Origin ISO Code",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_origin_state",
+            "fieldname": "sales_origin_state",
             "fieldtype": "Data",
-            "label": "Shipper 1 Origin State",
+            "label": "SALES Origin State",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_phone",
-            "fieldtype": "Data",
-            "label": "Shipper 1 Phone",
+            "fieldname": "sales_phone",
+            "fieldtype": "Phone",
+            "label": "SALES Phone",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_email",
+            "fieldname": "sales_email",
             "fieldtype": "Data",
-            "label": "Shipper 1 Email",
+            "label": "SALES Email",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper1_contact_person",
+            "fieldname": "sales_contact_person",
             "fieldtype": "Data",
-            "label": "Shipper 1 Contact Person",
+            "label": "SALES Contact Person",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_name",
+            "fieldname": "rental_name",
             "fieldtype": "Data",
-            "label": "Shipper 2 Name",
+            "label": "RENTAL Name",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_address_streetname",
+            "fieldname": "rental_address_streetname",
             "fieldtype": "Data",
-            "label": "Shipper 2 Address Street Name",
+            "label": "RENTAL Address Street Name",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_address_streetnumber",
+            "fieldname": "rental_address_streetnumber",
             "fieldtype": "Data",
-            "label": "Shipper 2 Address Street Number",
+            "label": "RENTAL Address Street Number",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_dispatching_information",
+            "fieldname": "rental_dispatching_information",
             "fieldtype": "Data",
-            "label": "Shipper 2 Dispatching Information",
+            "label": "RENTAL Dispatching Information",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_zip",
+            "fieldname": "rental_zip",
             "fieldtype": "Data",
-            "label": "Shipper 2 ZIP",
+            "label": "RENTAL ZIP",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_city",
+            "fieldname": "rental_city",
             "fieldtype": "Data",
-            "label": "Shipper 2 City",
+            "label": "RENTAL City",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_origin_country",
+            "fieldname": "rental_origin_country",
             "fieldtype": "Data",
-            "label": "Shipper 2 Origin Country",
+            "label": "RENTAL Origin Country",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_origin_iso_code",
+            "fieldname": "rental_origin_iso_code",
             "fieldtype": "Data",
-            "label": "Shipper 2 Origin ISO Code",
+            "label": "RENTAL Origin ISO Code",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_origin_state",
+            "fieldname": "rental_origin_state",
             "fieldtype": "Data",
-            "label": "Shipper 2 Origin State",
+            "label": "RENTAL Origin State",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_phone",
-            "fieldtype": "Data",
-            "label": "Shipper 2 Phone",
+            "fieldname": "rental_phone",
+            "fieldtype": "Phone",
+            "label": "RENTAL Phone",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_email",
+            "fieldname": "rental_email",
             "fieldtype": "Data",
-            "label": "Shipper 2 Email",
+            "label": "RENTAL Email",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
-            "fieldname": "shipper2_contact_person",
+            "fieldname": "rental_contact_person",
             "fieldtype": "Data",
-            "label": "Shipper 2 Contact Person",
+            "label": "RENTAL Contact Person",
             "read_only_depends_on": "eval:doc.enabled == 0"
         }
     ],

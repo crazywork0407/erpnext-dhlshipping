@@ -6,6 +6,6 @@ def get_data():
         {
             "module_name": "ERPNext DHL Shipping",
             "type": "module",
-                    "label": _("ERPNext DHL Shipping")
+            "label": _("ERPNext DHL Shipping")
         }
     ]
