@@ -11,6 +11,7 @@
         "user",
         "signature",
         "information",
+        "shipper",
         "sales_name",
         "sales_address_streetname",
         "sales_address_streetnumber",
@@ -67,6 +68,16 @@
             "fieldname": "signature",
             "fieldtype": "Password",
             "label": "Signature",
+            "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "shipper",
+            "fieldtype": "Select",
+            "label": "Shipper",
+            "option": [
+                "SALES",
+                "RENTAL"
+            ],
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
