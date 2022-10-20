@@ -5,12 +5,14 @@
     "editable_grid": 1,
     "engine": "InnoDB",
     "field_order": [
+        "api_connection_tab",
         "enabled",
         "application_id",
         "application_token",
+        "column_break",
         "user",
         "signature",
-        "information",
+        "shipper_tab",
         "shipper",
         "sales_name",
         "sales_address_streetname",
@@ -74,10 +76,7 @@
             "fieldname": "shipper",
             "fieldtype": "Select",
             "label": "Shipper",
-            "options": [
-                "SALES",
-                "RENTAL"
-            ],
+            "options": "\nSALES\nRENTAL",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
         {
@@ -223,6 +222,25 @@
             "fieldtype": "Data",
             "label": "RENTAL Contact Person",
             "read_only_depends_on": "eval:doc.enabled == 0"
+        },
+        {
+            "fieldname": "api_connection_tab",
+            "fieldtype": "Tab Break",
+            "label": "API"
+        },
+        {
+            "fieldname": "shipper_tab",
+            "fieldtype": "Tab Break",
+            "label": "Shipper"
+        },
+        {
+            "fieldname": "column_break_1",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "report_setting_section",
+            "fieldtype": "Section Break",
+            "label": "Report Setting"
         }
     ],
     "issingle": 1,
