@@ -14,7 +14,7 @@
         "signature",
         "shipper_tab",
         "shipper",
-        "sales_name",
+        // "sales_name",
         "sales_address_streetname",
         "sales_address_streetnumber",
         "sales_dispatching_information",
@@ -80,12 +80,12 @@
             "options": "\nSALES\nRENTAL",
             "read_only_depends_on": "eval:doc.enabled == 0"
         },
-        {
-            "fieldname": "sales_name",
-            "fieldtype": "Data",
-            "label": "SALES Name",
-            "read_only_depends_on": "eval:doc.enabled == 0"
-        },
+        // {
+        //     "fieldname": "sales_name",
+        //     "fieldtype": "Data",
+        //     "label": "SALES Name",
+        //     "read_only_depends_on": "eval:doc.enabled == 0"
+        // },
         {
             "fieldname": "sales_address_streetname",
             "fieldtype": "Data",
