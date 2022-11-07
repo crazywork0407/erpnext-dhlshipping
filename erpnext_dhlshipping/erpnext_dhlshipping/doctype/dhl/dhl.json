@@ -26,6 +26,7 @@
         "sales_phone",
         "sales_email",
         "sales_contact_person",
+        "column_break_1",
         "rental_name",
         "rental_address_streetname",
         "rental_address_streetnumber",
@@ -41,7 +42,7 @@
     ],
     "fields": [
         {
-            "default": "0",
+            "default": "1",
             "fieldname": "enabled",
             "fieldtype": "Check",
             "label": "Enabled"
