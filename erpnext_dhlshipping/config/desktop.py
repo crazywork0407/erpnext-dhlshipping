@@ -4,8 +4,8 @@ from frappe import _
 def get_data():
     return [
         {
-            "module_name": "ERPNext DHL Shipping",
+            "module_name": "ERPNextDHLShipping",
             "type": "module",
-            "label": _("ERPNext DHL Shipping")
+            "label": _("ERPNextDHLShipping")
         }
     ]
