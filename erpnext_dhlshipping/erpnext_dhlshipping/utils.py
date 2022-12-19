@@ -38,6 +38,14 @@ def get_contact(contact_name):
 		contact.phone = contact.mobile_no
 	return contact
 
+def get_contact_person(email):
+	user = frappe.db.get_value('User', email, "*")
+	return user
+
+def get_delivery_contact(name):
+	contact = frappe.db.get_value('Contact', name, "*")
+	return contact
+
 def match_parcel_service_type_carrier(shipment_prices, reference):
 	from erpnext_dhlshipping.erpnext_dhlshipping.doctype.parcel_service_type.parcel_service_type import match_parcel_service_type_alias
 

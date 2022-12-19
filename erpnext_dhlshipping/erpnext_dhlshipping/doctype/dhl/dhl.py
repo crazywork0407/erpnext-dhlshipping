@@ -19,7 +19,10 @@ class DHL(Document): pass
 class DHLUtils():
 	def __init__(self):
 		self.user_key = get_decrypted_password('DHL', 'DHL', 'api_password', raise_exception=False)
-		self.user_id, self.enabled = frappe.db.get_value('DHL', 'DHL', ['api_id', 'enabled'])
+		
+		# self.user_id, self.enabled = frappe.db.get_value('DHL', 'DHL', ['api_id', 'enabled'])
+		self.user_id = frappe.db.get_value('DHL', 'DHL', ['api_id', 'enabled'])
+		self.enabled = True
 
 		if not self.enabled:
 			link = frappe.utils.get_link_to_form('DHL', 'DHL', frappe.bold('DHL Settings'))
@@ -28,11 +31,13 @@ class DHLUtils():
 	def get_available_services(self, delivery_to_type, pickup_address,
 		delivery_address, shipment_parcel, description_of_content, pickup_date,
 		value_of_goods, pickup_contact=None, delivery_contact=None):
-		# Retrieve rates at DHL from specification stated.
+		# Retrieve rates at DHL 
+		
+		
+		# specification stated.
 		if not self.enabled or not self.user_id or not self.user_key:
 			return []
 
-		
 		# Get My Authorization token.
 		self.set_letmeship_specific_fields(pickup_contact, delivery_contact)
 		pickup_address.address_title = self.trim_address(pickup_address)
@@ -45,6 +50,7 @@ class DHLUtils():
 			'Accept': 'application/json',
 			'Access-Control-Allow-Origin': 'string'
 		}
+
 		payload = self.generate_payload(
 			pickup_address=pickup_address,
 			pickup_contact=pickup_contact,
@@ -55,6 +61,7 @@ class DHLUtils():
 			parcel_list=parcel_list,
 			pickup_date=pickup_date
 		)
+
 		try:
 			available_services = []
 			response_data = requests.post(

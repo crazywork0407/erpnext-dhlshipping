@@ -7,6 +7,10 @@ frappe.ui.form.on('Shipment', {
 			frm.add_custom_button(__('Fetch DHL Shipping Rates'), function () {
 				return frm.events.fetch_dhlshipping_rates(frm);
 			});
+			console.log("test update")
+			frm.add_custom_button(__('Get Available DHL Products'), function () {
+				return frm.events.get_available_dhl_products(frm);
+			});
 		}
 		if (frm.doc.shipment_id) {
 			frm.add_custom_button(__('Print Shipping Label'), function () {
@@ -59,6 +63,49 @@ frappe.ui.form.on('Shipment', {
 			});
 		}
 		else {
+			frappe.throw(__("Shipment already created"));
+		}
+	},
+
+	get_available_dhl_products: function (frm) {
+		if (!frm.doc.shipment_id) {
+			let selectMenu = new frappe.ui.Dialog({
+				title: 'Choose Available DHL Product',
+				fields: [
+					{
+						label: 'DHL Paket',
+						fieldname: 'dhl_packet',
+						fieldtype: 'Button'
+					},
+					{
+						label: 'DHL Paket International',
+						fieldname: 'dhl_packet_international',
+						fieldtype: 'Button'
+					},
+					{
+						label: 'DHL Europaket',
+						fieldname: 'dhl_europacket',
+						fieldtype: 'Button'
+					},
+					{
+						label: 'Warenpost',
+						fieldname: 'warenpost',
+						fieldtype: 'Button'
+					},
+					{
+						label: 'Warenpost International',
+						fieldname: 'warenpost_international',
+						fieldtype: 'Button'
+					},
+				],
+				primary_action_label: 'Close',
+				primary_action(values) {
+					console.log(values);
+					selectMenu.hide();
+				}
+			})
+			selectMenu.show();
+		} else {
 			frappe.throw(__("Shipment already created"));
 		}
 	},
